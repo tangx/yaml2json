@@ -1,0 +1,7 @@
+{
+    "student":{
+        "name":"zhangsan",
+        "age":10,
+        "male":true
+    }
+}
