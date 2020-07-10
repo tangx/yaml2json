@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -13,10 +12,11 @@ import (
 func main() {
 	var b []byte
 
-	if len(os.Args) == 0 {
-		b = stdinReader()
-	} else {
+	if len(os.Args) > 1 {
 		b = fileReader(os.Args[1])
+	} else {
+		fmt.Printf("Usage: %s path/2/file.yml\n", os.Args[0])
+		os.Exit(1)
 	}
 
 	yaml2json(b)
@@ -37,18 +37,4 @@ func fileReader(file string) (b []byte) {
 	}
 
 	return
-}
-
-func stdinReader() []byte {
-	// scan能够按行扫描输入
-	sc := bufio.NewScanner(os.Stdin)
-
-	// var s []byte
-	var s string
-	for sc.Scan() {
-		txt := sc.Text()
-		s += txt + "\n"
-	}
-
-	return []byte(s)
 }
