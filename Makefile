@@ -12,7 +12,7 @@ build.x:
 	CGO_ENABLED=0 GOOS=linux  GOARCH=arm64 $(MAKE) build
 
 build:
-	go build -o out/$(BINARY)-$(VERSION)-$(GOOS)-$(GOARCH) .
+	go build -o out/$(BINARY)-v$(VERSION)-$(GOOS)-$(GOARCH) .
 
 clean:
 	rm -rf out
