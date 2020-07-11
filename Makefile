@@ -14,5 +14,9 @@ build.x:
 build:
 	go build -o out/$(BINARY)-v$(VERSION)-$(GOOS)-$(GOARCH) .
 
+
+tag:
+	git tag v$(VERSION) && git push origin v$(VERSION)
+
 clean:
 	rm -rf out
