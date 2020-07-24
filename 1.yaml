@@ -1,0 +1,7 @@
+ APP: aisys-scene-drill__aisys--staging
+ ENV: staging
+ APP_CONFIG: "SRV_HW_DANGER_MODEL=https://danger-huawei-api.demo.rockontrol.com"
+ PROJECT_NAME: web-aisys-scene-drill
+ PROJECT_GROUP: aisys
+ PROJECT_FEATURE: ""
+ PROJECT_DESCRIPTION: aisys-scene-drill

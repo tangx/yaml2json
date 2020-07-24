@@ -1,0 +1,5 @@
+project:
+  name: srv-annotate
+  version: 2.0.0
+  group: aisys
+  description: 标注系统
